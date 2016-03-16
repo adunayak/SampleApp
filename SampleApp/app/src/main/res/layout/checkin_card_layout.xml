@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/location_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/location_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/location_drawable"
+                android:background="@drawable/map_selector"
+                />
+
+            <TextView
+                android:id="@+id/location_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:maxLines="2"
+                android:textSize="@dimen/text_size_medium"
+                android:ellipsize="end"
+                android:layout_toLeftOf="@id/location_iv"
+                android:layout_below="@+id/about_textview"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/party_image_size"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/placeholder_image"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/location_layout"/>
+
+        <TextView
+            android:id="@+id/more_image_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:textColor="@drawable/more_image_textview_drawable"
+            android:text="@string/more_photos"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_below="@+id/image_view"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
